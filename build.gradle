@@ -27,6 +27,7 @@ dependencies {
 	implementation 'com.oracle.database.security:oraclepki:21.11.0.0'
 	implementation 'com.oracle.database.security:osdt_cert:21.11.0.0'
 	implementation 'com.oracle.database.security:osdt_core:21.11.0.0'
+
 //	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 //	implementation 'org.springframework.session:spring-session-data-redis'
 
@@ -39,4 +40,9 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+// plain.jar 생성 방지
+tasks.named('jar') {
+	enabled = false;
 }
